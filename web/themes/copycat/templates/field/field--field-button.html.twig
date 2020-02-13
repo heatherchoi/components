@@ -1,0 +1,7 @@
+{% for item in items %}
+  {% include '@components/buttons/button.twig' with {
+    'url': item.content['#url_title'],
+    'text': item.content['#title']
+  } %}
+
+{% endfor %}

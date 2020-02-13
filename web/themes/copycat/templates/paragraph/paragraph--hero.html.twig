@@ -1,0 +1,31 @@
+{% embed '@components/hero/hero.twig' with {
+  'modifier': 'has-overlay',
+  'image': content.field_background|field_value|render|striptags|trim,
+  'image_alt': content.field_background.0['#media'].field_media_image.0.alt,
+  'title': content.field_title|field_value,
+  'subtitle': content.field_subtitle|field_value,
+  'teaser': content.field_teaser|field_value,
+  'button': content.field_button
+} %}
+
+  {% block button %}
+    {{ content.field_button }}
+  {% endblock %}
+
+{% endembed %}
+
+
+
+{# include '@components/hero/hero.twig' with {
+  'modifier': 'has-overlay',
+  'image': content.field_background|field_value|render|striptags|trim,
+  'image_alt': content.field_background.0['#media'].field_media_image.0.alt,
+  'title': content.field_title|field_value,
+  'subtitle': content.field_subtitle|field_value,
+  'teaser': content.field_teaser|field_value,
+  'button': content.field_button
+} #}
+
+{# content.field_background|field_value #}
+{# dd(content.field_background.0['#media'].field_media_image.0.alt) #}
+{# dd(content.field_background|field_target_entity) #}
