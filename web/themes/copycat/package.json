@@ -29,5 +29,10 @@
   },
   "scripts": {
     "component": "node component.js"
+  },
+  "dependencies": {
+    "@pattern-lab/engine-react": "^0.2.1-beta.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   }
 }
